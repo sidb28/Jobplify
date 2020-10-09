@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" class="smooth-scroll">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Quick Demo</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css">
+        <style type="text/css">.smooth-scroll {scroll-behavior: smooth;}</style>
+        <link rel="stylesheet" href="./demo-min.css">
+    </head>
+    <body>
+        <div id="app" class="max-w-sm mx-auto py-32">
+            <h1 class="text-3xl mb-12">MailtoUI.js Quick Demo</h1>
+
+            <p class="mb-8">
+                <a class="mailtoui text-blue-600 underline" href="mailto:user1@example.com,user2@example.com?subject=Hello!">
+                    Mailto link with subject
+                </a>
+            </p>
+
+            <p class="mb-8">
+                <a class="mailtoui text-blue-600 underline" href="mailto:user2@example.com?body=Hello World!">
+                    Mailto link with body
+                </a>
+            </p>
+
+            <p class="mb-8">
+                <a class="mailtoui text-blue-600 underline" :href="mailtoHref">
+                    {{ emailDisplay }}
+                </a>
+                <span class="text-gray-600"> - Created in Vue</span>
+            </p>
+        </div>
+        
+        <!-- Toggle commenting the next two lines to load MailtoUI.js via script tag or Vue -->
+
+        <!-- <script src="../src/js/mailtoui.js" data-options='{ "buttonText1": "Gmail", "autoClose": true, "disableOnMobile": true }'></script> -->
+        <script src="./demo-min.js"></script>
+    </body>
+</html>
